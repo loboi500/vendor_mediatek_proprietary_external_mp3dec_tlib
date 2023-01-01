@@ -1,0 +1,41 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            shared_libs: [
+                "libmtk_drvb",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc",
+            ],
+            srcs: [
+                "arm/libmp3dec_mtk.so",
+            ],
+        },
+        arm64: {
+            shared_libs: [
+                "libmtk_drvb",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc",
+            ],
+            srcs: [
+                "arm64/libmp3dec_mtk.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    mtk_brm_platform: "mt6771",
+    mtk_product_line: "tablet",
+    mtk_src_path: "vendor/mediatek/proprietary/external/mp3dec",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libmp3dec_mtk",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+    vendor: true,
+}
+
